@@ -1,0 +1,65 @@
+## 1、stop() 
+当在动画执行时停止当前动画，但是会执行动画队列中的下一个动画，可以设置一个参数将动画队列全部清除。
+## 2、animate() 
+执行动画，并终止状态即使该动画结束时的最终状态。
+
+## 3、extend()
+类方法，实现对象的合并以及对象的深度克隆，合并的对象指针为第一个对象指针，可以用来进行深度克隆。
+
+
+## 4、on(event,selector,fun)
+实现DOM事件监听的代理，节约性能，简化代码；
+
+删除代理的事件的方法：off( events [, selector ] [, handler ] )；
+
+触发事件的方法：trigger()
+
+## 5、dom查找方法：
+- find()
+- parent()
+- children()
+- siblings()
+- next()/nextAll()
+- prev()/prevAll()
+
+##6、样式相关：
+
+    a、addClass()
+    
+    b、removeClass()
+    
+    c、toggleClass()
+    
+    d、hasClass()
+    
+    e、css()
+
+## 7、获取属性： 
+attr()
+
+## 8、显示和隐藏以及切换：
+hide()、show()、toggle()
+
+## 9、尺寸 ：
+width()/height()计算的都是盒子内容区的宽高，不管是border-box还是content-box都是去除padding和border的。同理于css("height/width")，同时还有innerWidth|outerWidth等。
+
+##10、位置：
+offset()相对于document而言的位置，指的是盒子中的border部分在文档中的绝对坐标位置，不管是border-box还是content-box。position()是相对于祖先定位元素为参考元素的相对偏移位置，是参考元素的外padding线到该元素外margin线的距离（注意：relative中定义的距离是参考元素的内padding线到该元素的外margin线的距离，且相对位置值不受box-sizing的印象，在ie8以及以上都满足）。scrollTop/scrollLeft是计算某一元素的内部元素滚动的上|左距离。
+
+##11、DOM增删改操作：
+
+增加：append()|appendTo|html()|text()|
+
+删除：remove()|detach()|empty()
+
+修改：replaceAll()|replaceWidth()
+
+##12、文档加载完毕事件后执行的方法：
+
+$(document).ready(function(){})或者$(function(){})
+
+##13、event对象：
+事件作用的根目标元素event.target|当前事件作用到的元素event.currentTarget|阻止事件的冒泡event.stopPropagation()|阻止元素的默认行为event.preventDefault()
+
+##14、ajax对象：
+$.ajax({param}).done(function(){}).fail(function(){}).always(function(){})
