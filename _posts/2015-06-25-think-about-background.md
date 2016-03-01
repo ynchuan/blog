@@ -1,5 +1,5 @@
 ---
-layout: md
+layout: default
 title: 回味background
 category: CSS属性基础
 author: 林小志_linxz
