@@ -5,7 +5,7 @@ category: 移动开发
 author: ynchuan
 ---
 
-#fastclick执行机制
+# fastclick执行机制
 　　fastclick作为移动端解决click事件响应过慢问题的办法，采用touchend事件进行click事件的模拟。之所以click响应过慢，是因为在Android低版本中为了区分双击事件，所以对于单击事件进行了300ms左右的延时处理，依次来判断用户是否要执行双击。
 
 
