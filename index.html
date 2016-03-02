@@ -28,7 +28,7 @@ title: ynchuan的前端学习记录
 <ul class="categories_list">
 	{% for category in site.categories %}
 		<li class="category_list_item">
-			<a href="/showCategory.html?categoryName={{ category | first }}">
+			<a href="./showCategory.html?categoryName={{ category | first }}">
 			{{ category | first }}</a> ({{ category | last | size }})
 		</li>
 	{% endfor %}
@@ -42,9 +42,12 @@ title: ynchuan的前端学习记录
         <a href="{{ site.paginate_path | replace: ':num',page }}">{{ page }}</a>  
     {% endif %}  
 {% endfor %}
+<br>
 {% for post in paginator.posts %}  
     <a href="{{ post.url }}">{{ post.title }}</a>  
 {% endfor %} 
+<br>
+
 {% if paginator.total_pages > 1 %}  
     {% if paginator.previous_page %}  
         <a href="{{ paginator.previous_page_path }}">上一页</a>  
