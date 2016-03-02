@@ -1,3 +1,10 @@
+---
+layout: default
+title: jquery代码组织结构
+category: Jquery开发
+author: ynchuan
+---
+
 #jquery代码组织结构
 
 　　jquery源码结构采用jquery函数对象进行组织，将其中的静态方法挂载在jquery函数对象的属性上；同时基于dom对象创建的jquer对象，即每new一个jquery对象，其中存放了该参数选择器所选中的dom节点对象，并以数组的形式进行组织，其中的操作方法则是采用原型链的形式进行组织，实现方法的共享。

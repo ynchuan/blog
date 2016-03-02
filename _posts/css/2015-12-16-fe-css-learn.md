@@ -1,3 +1,10 @@
+---
+layout: default
+title: css学习资料
+category: CSS开发
+author: ynchuan
+---
+
 # 前端样式基础
 
 前端学习分为html标签、css样式表和javascript三部分，为满足后端开发者根据业务对页面调整的基本需求，现针对页面**切图css（重构）**部分，提供一些学习资料推荐。

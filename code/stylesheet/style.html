@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>style demo</title>
+		<meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1"/>
+		<meta name="renderer"content="webkit">
+		<link rel="stylesheet"href="css/styleDemo.css">
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/jquery.tab.js"></script> 
+		<script>
+		$(function() {
+			$(".grp_tab_1").tab();
+		}
+		)
+		function switchColor(e) {
+			var tar=e.target;
+			$(tar).parent().toggleClass("toggle");
+		}
+		var n=0;
+		function _switchColor(e) {
+			var tar=e.target;
+			if(n%2==0){
+				$(tar).siblings().css("background-color","#094209");
+				$(tar).siblings().css("color","red");
+				//...
+			}else{
+				$(tar).siblings().css("background-color","green");
+				$(tar).siblings().css("color","#fff");
+				//...
+			}
+			n++; 
+		}
+		</script>
+	</head>
+	<body>
+		<h4>1、demo1 style样式</h4>
+		<div class="demo1">
+			<div class="demo"style="background-color:red;">inner style</div>
+		</div>
+		<br>
+		<h4>2、demo2 class样式</h4>
+		<div class="demo2">
+			<div class="demo green">class style</div>
+		</div>
+		<br>
+		<h4>3、demo3 class和style样式同时存在时，用哪一个样式？</h4>
+		<div class="demo3">
+			<div class="demo green"style="background-color:red;">class and inner style </div>
+		</div>
+		<br>
+		<h4>4、demo4 多个class同时存在时，用哪一个样式？</h4>
+		<div class="demo4">
+			<div class="demo green blue">multiple class style</div>
+		</div>
+		<br><br>
+		<h4>5、应该怎样应用样式权重？</h4>
+		<div class="demo6">
+			<input type="button" value="点击切换颜色" onclick="switchColor(event)">
+			<br><br>
+			<div class="demo green">multiple class style</div>
+			<p>
+				
+			</p>
+		</div>
+		<br><br>
+		<br><br>
+		<h4>6、一个样式切换样式的案例</h4>
+		<div class="demo5">
+			<div class="demo4-1">
+				<div class="grp_tab_1">
+					<div class="yc_tab_h">
+						<ul class="yc_tab_ul">
+							<li class="yc_tab_li active">
+								<span class="hosticon icon">24小时逐时使用量</span>
+							</li>
+							<li class="yc_tab_li">
+								<span class="dataicon icon">浏览统计</span>
+							</li>
+							<li class="yc_tab_li">
+								<span class="servicon icon">人像对比使用情况</span>
+							</li>
+						</ul>
+					</div>
+					<div class="yc_tab_container">
+						tab1
+					</div>
+					<div class="yc_tab_container yc_tab_hide">tab2</div>
+					<div class="yc_tab_container yc_tab_hide">tab3</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+	</body>
+</html>

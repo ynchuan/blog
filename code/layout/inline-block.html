@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inline-block layout</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style>
+	    	.col-4{
+	    		display: inline-block;
+	    		*display: inline;
+	    		*zoom:1;
+	    		width:25%;
+	    		height:30px;
+	    		border:1px solid #999;
+	    		font-size: 14px;
+	    	}
+	    	.wrap{
+		    	margin:10px auto;
+		    	max-width:1280px;
+		    	min-width:1024px;
+		    	font-size: 0px;
+		    }
+		    .c1{
+		    	background-color: red;
+		    	height:60px;
+		    }
+		    .c2{
+		    	background-color: yellow;
+		    }
+		    .c3{
+		    	background-color: green;
+		    }
+		    .c4{
+		    	background-color: blue;
+		    }
+		    .c5{
+		    	background-color: orange;
+		    }
+		    .c6{
+		    	background-color: lightgreen;
+		    }
+	    </style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<section class="section">
+		<div class="wrap">
+			<div class="col-4 c1">1</div>
+			<div class="col-4 c2">2</div>
+			<div class="col-4 c3">3</div>
+			<div class="col-4 c4">4</div>
+			<div class="col-4 c5">5</div>
+			<div class="col-4 c6">6</div>
+		</div>
+	</section>
+</body>
+</html>

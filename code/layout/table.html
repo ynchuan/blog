@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>table layout</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <style>
+	    	.wrap{
+		    	margin:10px auto;
+		    	max-width:1280px;
+		    	min-width:1024px;
+		    }
+		    .sTable{
+				border-collapse: collapse;
+				width:100%;
+		    }
+		    .col-4{
+	    		width:25%;
+	    		height:30px;
+	    		border:1px solid #777;
+	    		text-align: center;
+	    	}
+		    .c1{
+		    	background-color: red;
+		    	height:60px;
+		    }
+		    .c2{
+		    	background-color: yellow;
+		    }
+		    .c3{
+		    	background-color: green;
+		    }
+		    .c4{
+		    	background-color: blue;
+		    }
+		    .c5{
+		    	background-color: orange;
+		    }
+		    .c6{
+		    	background-color: lightgreen;
+		    }
+
+	    </style>
+	    <script type="text/javascript">
+
+	    </script>
+	</head>
+	<body>
+		<section class="section">
+			<div class="wrap">
+				<table class="sTable">
+					<tr>
+						<td class="col-4 c1">1</td>
+						<td class="col-4 c2">2</td>
+						<td class="col-4 c3">3</td>
+						<td class="col-4 c4">4</td>
+					</tr>
+					<tr>
+						<td class="col-4 c5" colspan="2">5</td>
+						<td class="col-4 c6" colspan="2">6</td>
+					</tr>
+					<tr>
+						<td class="col-4 c2">7</td>
+						<td class="col-4 c3">8</td>
+					</tr>
+					<tr>
+						<td class="col-4 c2" rowspan="2">9</td>
+						<td class="col-4 c3">9</td>
+					</tr>
+					<tr >
+						<td class="col-4 c4">10</td>
+						<td class="col-4 c3">8</td>
+					</tr>
+					<tr >
+						<td class="col-4 c4">10</td>
+						<td class="col-4 c3">8</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</body>
+</html>
+     

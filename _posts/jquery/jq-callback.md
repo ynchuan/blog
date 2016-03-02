@@ -1,3 +1,10 @@
+---
+layout: default
+title: callback回调函数
+category: Jquery开发
+author: ynchuan
+---
+
 #callback回调函数
 　　jquery中callback回调机制以观察者模式为基础，通过传入初始化参数进行回调方式的控制。其中回调参数包括：once、memory、stopOnFalse、unique四个参数，进行4种不基础同方式的控制，因为可以通过组合实现复合功能。
 ###观察者模式

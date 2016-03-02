@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position and marign create left&right layout</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style>
+	    .header{
+	    	background-color: #ccc;
+	    	padding:1px;
+	    }	
+	    .wrap{
+	    	margin:10px auto;
+	    	max-width:1280px;
+	    	min-width:1024px;
+	    	position: relative;
+	    }
+	    .hLeft{
+	    	position: absolute;
+	    	left:0;
+	    	top:0;
+	    	width:15%;
+	    	height: 50px;
+	    	border:1px solid #999;
+	    }
+	    .hRight{
+	    	height:50px;
+	    	border:1px solid #999;
+	    	margin-left:15%;
+	    }
+	    .box{
+	    	height: 30px;
+	    	background-color: red
+	    }
+	    </style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="wrap">
+			<div class="hLeft">left</div>
+			<div class="hRight">right</div>
+		</div>
+	</header>
+	<!-- <div class="box">ss</div>
+-->
+</body>
+</html>

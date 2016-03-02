@@ -1,3 +1,10 @@
+---
+layout: default
+title: display与line-height+vertical-align+text-align的关系
+category: CSS开发
+author: ynchuan
+---
+
 ##display
 display属性为dom对象的布局属性，一般常用的包括inline（表示行级元素）、block（表示块级元素）、inline-block（表示行块级元素）属性，还有table、table-cell、flex等不常用的，暂不讨论。
 

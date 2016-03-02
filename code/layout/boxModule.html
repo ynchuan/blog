@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>box module</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style>
+	    	.box{
+	    		width: 90px;
+	    		height:90px;
+	    		padding:20px;
+	    		border:4px solid #ddd;
+				margin:5px;
+	    		background-color: #ccc;
+	    		text-align: center;
+	    		line-height: 90px;
+	    		/*box-sizing:border-box;*/
+	    	}
+	    	.fr{
+	    		float:right;
+	    	}
+	    </style>
+</head>
+<body>
+	<div class="box"> box</div>
+	<div class="fr">
+		<img src="img/offset.png" alt="">offset eqs content+padding+border</div>
+	<div>
+		<button onclick="getD()">获取box宽高</button>
+	</div>
+	<script type="text/javascript">
+			function getD(){
+			 var dom=document.querySelector(".box");
+			 var ow=dom.offsetWidth;
+			 var oh=dom.offsetHeight;
+			 alert("dom offsetWidth="+ow);
+			 alert("dom offsetHeiht="+oh);
+			}
+	    </script>
+</body>
+</html>

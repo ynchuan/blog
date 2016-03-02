@@ -1,3 +1,10 @@
+---
+layout: default
+title: sizzle选择器
+category: Jquery开发
+author: ynchuan
+---
+
 #sizzle选择器
 
 sizzle选择器作为一个单独的节点查找库，提供了效率较高的查询体验，所以非常适合以dom节点做为设计基础的jquery框架，该节点查找工具以浏览器提供的节点api作为根本，进行dom节点的查询。api为getElelementById、getElementByName、getElementByClass、querySelector(All)等低级以即高级api。

@@ -1,0 +1,51 @@
+/**
+ * tab style
+ */
+.yc_tab_li {
+  width: 20%;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  text-align: left;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #DDDDDD;
+  font-size: 20px;
+  cursor: pointer;
+}
+.yc_tab_ul {
+  background-color: #FBFAF8;
+  border-bottom: 1px solid #DDDDDD;
+  height: 42px;
+  font-size: 0;
+}
+.yc_tab_ul .active {
+  background-color: #FFF;
+  border-top: 2px solid #00A2CA;
+  *border-top-width: 3px;
+  color: #00A2CA;
+  border-right: 2px solid #DDDDDD;
+}
+.yc_tab_hide {
+  display: none;
+}
+.grp_tab_1 {
+  *text-align: left;
+}
+ul {
+  padding: 0;
+}
+.demo4 .blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.demo {
+  line-height: 50px;
+  color: #fff;
+}
+.toggle .green {
+  background-color: #094209;
+  color: red;
+}

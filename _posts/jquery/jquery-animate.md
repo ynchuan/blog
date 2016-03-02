@@ -1,3 +1,10 @@
+---
+layout: default
+title: jquery动画机制
+category: Jquery开发
+author: ynchuan
+---
+
 #jquery动画机制
 
 jquery的动画为使用者提供了跨浏览器兼容的设计，通过样式动作的帧模拟实现跨浏览器，并跟css3中的anmiate有着近似的效果。但是jquery中的动画属性只支持数值属性的动画，例如：margin、opacity、width、height等数值属性的样式。

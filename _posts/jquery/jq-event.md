@@ -1,3 +1,10 @@
+---
+layout: default
+title: event
+category: Jquery开发
+author: ynchuan
+---
+
 #event
 
 　　jquery中对于事件的处理中主要包含对dom对象的事件代理（其中包含事件的添加和触发）、模拟事件冒泡的过程实现事件触发，其中依据数据缓存作为事件处理的基础。

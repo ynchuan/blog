@@ -1,3 +1,10 @@
+---
+layout: default
+title: jquery 数据缓存
+category: Jquery开发
+author: ynchuan
+---
+
 #jquery 数据缓存
 
 　　数据缓存，即采用闭包的方法将数据保存到$.cache变量中，进行数据的暂存和快速查询。其API为$(**).data,意为将数据保存在DOM节点关联的变量中，其中jquery.expendo为DOM节点的一个属性，属性对应的值为$.cache中的key，如此实现关联；同理jquery的事件机制也是采用这种方法进行数据的保存的，只是其保存在缓存的events字段下，而数据缓存保存在data字段下。

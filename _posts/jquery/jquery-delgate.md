@@ -1,3 +1,10 @@
+---
+layout: default
+title: JS事件代理
+category: Jquery开发
+author: ynchuan
+---
+
 ##什么是事件代理
 JavaScript事件代理是一种简单的技巧，通过它你可以把事件处理器添加到一个父级元素上，这样就避免了把事件处理器添加到多个子级元素上。
 ##事件代理的原理

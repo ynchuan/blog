@@ -1,0 +1,115 @@
+/**
+ * 支持部分less
+ */
+.text_overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bfc {
+  overflow: hidden;
+  zoom: 1;
+}
+.clear {
+  clear: both;
+  *line-height: 0px;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.margin1em {
+  margin: 7px 14px;
+}
+.padding1em {
+  padding: 7px 14px;
+}
+.posabs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.inline-block {
+  display: inline-block;
+  _display: inline;
+  _zoom: 1;
+}
+/**
+ * commom design
+ */
+/**
+ * 主版块
+ */
+.main {
+  min-width: 1124px;
+  _text-align: center;
+  margin-right: -calc(100vw - 100%);
+  _zoom: 1
+  /*_width:expression(document.body.clientWidth < 1124 ? "1124px" : "auto");*/
+}
+/**
+ * header
+ */
+.grp_header {
+  background-color: #364860;
+  height: 40px;
+  color: #fff;
+}
+/**
+ * nav
+ */
+.grp_nav {
+  background-color: #F2F3F5;
+  height: 86px;
+  overflow: hidden;
+  zoom: 1;
+}
+/**
+ * aritcle
+ */
+/**
+ * aside
+ */
+.grp_aside {
+  float: left;
+  width: 21%;
+  max-width: 350px;
+  min-width: 236px;
+  height: 300px;
+  background-color: #008000;
+}
+/**
+ * section
+ */
+.grp_section {
+  overflow: hidden;
+  zoom: 1;
+  height: 100%;
+  min-height: 400px;
+  _height: 500px;
+  _text-align: left;
+  background-color: #ffff00;
+}
+/**
+ * footer
+ */
+.grp_footer {
+  height: 60px;
+  background-color: #0092dd;
+  font-size: 12px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+.footerfix {
+  position: fixed;
+  _position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+}
