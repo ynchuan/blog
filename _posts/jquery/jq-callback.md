@@ -5,9 +5,9 @@ category: Jquery开发
 author: ynchuan
 ---
 
-#callback回调函数
+# callback回调函数
 　　jquery中callback回调机制以观察者模式为基础，通过传入初始化参数进行回调方式的控制。其中回调参数包括：once、memory、stopOnFalse、unique四个参数，进行4种不基础同方式的控制，因为可以通过组合实现复合功能。
-###观察者模式
+### 观察者模式
 设计模式中常见也是使用比较多的代码组织方式，通过创建数组来实现队列方法的保存，其中配备add方法；通过fire触发遍历队列中存储的值，完成触发。
 
 对应源码：
@@ -66,7 +66,7 @@ author: ynchuan
 		}
 	}
 
-###参数实现细节
+### 参数实现细节
 once队列，只允许fire一次，后续的add以及fire将进入对应的函数；
 
 memory队列，会在add的过程中通过记忆参数进行fire，无需再次手动fire；

@@ -5,7 +5,7 @@ category: JS技术
 author: ynchuan
 ---
 
-##关于Object的属性
+## 关于Object的属性
 - 定义属性 
 
 		var obj = {};

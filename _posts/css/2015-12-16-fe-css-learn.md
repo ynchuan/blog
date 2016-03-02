@@ -35,7 +35,7 @@ css是浏览器的排版标记，浏览器跟office word软件功能相同，都
 
 - 绝对布局：绝对流即是脱离正常流而存在，但是不影响后面正常流的布局；绝对布局要注意绝对布局的参考节点，其参考节点就是父级或者祖先节点中position为非static的元素节点，在js中可以通过offsetParent查看参考节点。
 
-###css中的盒子模型
+### css中的盒子模型
 
 css中的盒子模型主要分为两类：块级盒子和行级盒子
 
@@ -51,11 +51,11 @@ css中的盒子模型主要分为两类：块级盒子和行级盒子
 	
 	[我对CSS vertical-align的一些理解与认识](http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/)
 
-###css布局实例应用以及涉及的特性
+### css布局实例应用以及涉及的特性
 在开发中，我们常遇到的问题一般有标签的**两栏或多栏布局**和**水平居中或竖直居中**的问题，该两类问题也是css属性的组合应用的实现。
 > css的布局的单个属性并不是很多，由上可知，但是却可以实现多种多样的布局，其关键之处在于属性之间的排列组合会产生许多不同的效果，这也是样式表的特性和难点。
 
-#####两栏或者多栏布局
+##### 两栏或者多栏布局
 两栏和多栏布局方案 [点击查看](http://10.110.1.135:8888/?p=123)*（公司内网环境，涉及源码可以跟我要）*
 
 其中涉及的概念：BFC（[百度关键词：css bfc](https://www.baidu.com/s?wd=css%20bfc&rsv_spt=1&rsv_iqid=0xb811c04f00094bec&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=5&rsv_sug2=0&rsv_sug7=100&inputT=3186&rsv_sug4=5149)），理解该概念可以解决许多前端布局问题。
@@ -66,12 +66,12 @@ css中的盒子模型主要分为两类：块级盒子和行级盒子
 - [我对BFC的理解](http://www.cnblogs.com/dojo-lzz/p/3999013.html)
 - [前端精选文摘：BFC 神奇背后的原理](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
 
-#####水平居中或竖直居中
+##### 水平居中或竖直居中
 
 - [解读CSS布局之-水平垂直居中](http://f2e.souche.com/blog/jie-du-cssbu-ju-zhi-shui-ping-chui-zhi-ju-zhong/)
 - [CSS元素水平垂直居中方法总结](http://www.cnblogs.com/Dudy/p/4085292.html)
 
-###最后
+### 最后
 页面重构需要对css有深入的理解，同时对于css的理解也是一个反复颠覆过去理解重新认识的过程。
 
 另附上：

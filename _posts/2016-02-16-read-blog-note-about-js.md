@@ -7,7 +7,7 @@ author: ynchuan
 
 MVC requirejs/AMD 
 
-###js面试题围观
+### js面试题围观
 [ 源文](http://www.codeceo.com/article/one-javascript-interview.html)
 
 	function Foo() {
@@ -28,7 +28,7 @@ MVC requirejs/AMD
 	new Foo().getName();//3
 	new new Foo().getName();//3
 
-###[CRASH THE BROWSER THROUGH JS](http://www.codeceo.com/article/12-line-code-browser-die.html)
+### [CRASH THE BROWSER THROUGH JS](http://www.codeceo.com/article/12-line-code-browser-die.html)
 
 	var total="";
 	for (var i=0;i<1000000;i++)

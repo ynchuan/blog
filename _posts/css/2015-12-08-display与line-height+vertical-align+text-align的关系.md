@@ -5,22 +5,22 @@ category: CSS开发
 author: ynchuan
 ---
 
-##display
+## display
 display属性为dom对象的布局属性，一般常用的包括inline（表示行级元素）、block（表示块级元素）、inline-block（表示行块级元素）属性，还有table、table-cell、flex等不常用的，暂不讨论。
 
 下面我们讨论一下inline、block以及inline-block三个属性跟以下属性的关系。
 
-##inline-heihgt
+## inline-heihgt
 inline-heihgt表示行高，该属性表示office word中的行间距，即一行文字的高度,可以作用在行级和块级元素上。属性值为数字+单位。常见应用：一般而言对于block级元素，设置行高就是设置了高度，所以不用再次设置高度了，同时通过行高设置高度，还可以使得文字或者行级元素居中。
 ##vertical-align
 vertial-align表示文字（display：inline）或者文本块（display:inline-block）在行间的**垂直方向**上的对齐方式,样式属性作用对象为行级或者行块级元素；属性作用在block级别的元素上没有效果。
 其属性值常用的有top|middle|baseline|bottom|数字+单位
 
-##text-align
+## text-align
 表示文本**水平方向**上的对齐方式，作用在block级别的dom上，属性值有left|right|center
 
 
-###下面我们进行以上属性组合使用的一些讨论：
+### 下面我们进行以上属性组合使用的一些讨论：
 1、inline元素无法手动设置宽高，那么它的大小究竟由什么因素决定？
 
 2、给定以下条件：
@@ -51,7 +51,7 @@ vertial-align表示文字（display：inline）或者文本块（display:inline-
 
 
 [参见demo](http://codepen.io/ynchuan/pen/zveMNO)
-![](../images/inline.png)
+![](/blog/images/inline.png)
 
 已知以上条件，chrome环境下，问题的答案是多少？又有哪些因素来决定？
 
@@ -61,7 +61,7 @@ vertial-align表示文字（display：inline）或者文本块（display:inline-
 
 ps：结果的验证请使用屏幕标尺进行验证，该处主要涉及css中的行级盒子模型
 
-###以上讨论答案以及个人理解分析：
+### 以上讨论答案以及个人理解分析：
 1、inline元素盒子的**宽度**由该文本的字体决定，此处为汉字字体-宋体字，对于英文在font-size=16px的情况下其宽度大约为8px，但是不同字体宽度不同；
 
 **高度**通过边框测量和推测应该是font-size的大小，应该也会和字体font-family有些关系，具体尚未研究清楚，注意，审查元素的时候为18px，是因为上下border存在2个像素。
@@ -73,7 +73,7 @@ ps：结果的验证请使用屏幕标尺进行验证，该处主要涉及css中
 行级盒子的模型可以理解为由汉语拼音练习册中的四线（分别为top|middle|baseline|bottom四线）加上下半间距构成，其中以英文字母X进行参考。
 inline box 模型参考:
 
-![](../images/line-box.png)
+![](/blog/images/line-box.png)
 
 问题中绿色边框表示是的就是四线的高度。
 

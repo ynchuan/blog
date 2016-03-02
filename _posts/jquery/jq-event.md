@@ -5,7 +5,7 @@ category: Jquery开发
 author: ynchuan
 ---
 
-#event
+# event
 
 　　jquery中对于事件的处理中主要包含对dom对象的事件代理（其中包含事件的添加和触发）、模拟事件冒泡的过程实现事件触发，其中依据数据缓存作为事件处理的基础。
 
@@ -391,7 +391,7 @@ author: ynchuan
 
 事件缓存数据结构：
 
-![](../images/data.png)
+![](/blog/images/data.png)
 
 在$.cahce中，节点上的事件全部保存在events上，并进行事件类型的分类保存，每个分类事件都是数组保存，数组再次保存object，object保存了执行函数，执行参数，代理对象的选择器。。。
 

@@ -5,10 +5,10 @@ category: Jquery开发
 author: ynchuan
 ---
 
-#jquery动画机制
+# jquery动画机制
 
 jquery的动画为使用者提供了跨浏览器兼容的设计，通过样式动作的帧模拟实现跨浏览器，并跟css3中的anmiate有着近似的效果。但是jquery中的动画属性只支持数值属性的动画，例如：margin、opacity、width、height等数值属性的样式。
-###细节记录
+### 细节记录
 
 - 首先，一个动画（animate方法）中可以包含多个动作，例如：`div.animate({"margin-left":'150px','opacity':'0.5'},10000)`，其中包含两个动作：marginLeft和Opacity，如果继续添加动画，例如` div.animate({"margin-left":'300px'},5000)`，则视为下一个动画，其中包含一个动作：marginLeft，并会在上一个动画完成以后才会启动该动画；并且在动画执行的动作的过程中会将一个动作分解成动作帧，通过定时器进行样式的定时更新渲染，最终完成该动作以及该动画。另：多个动作在一个动画中执行的时候，会交替进行多个动作执行。
 
@@ -23,7 +23,7 @@ jquery动画引擎的执行流程：
 将animate添加到$.cache.{dom}.fx上---查看fx中[1]的inpogress，检测动画是否已经启动--未启动则调动queue-dequeue-doAnimate，启动动画--调用custom进行动画中动作的分解定制并添加定时setInterval方法，完成启动，等待异步执行时间的到来---继续执行后续的animate方法将方法压栈到在fx的数组中-----------异步定时时间到时，调用tick方法遍历custom中定制的动作---每一个动作都要调用step方法，实现动作帧的计算并更新该帧，当最后一个动作完成以后启动下一个动画。
 
 
-###代码部分：
+### 代码部分：
 
         //同步部分:
         animate: function(prop, speed, easing, callback) {
@@ -211,5 +211,5 @@ jquery动画引擎的执行流程：
 
 
 
-###总结
+### 总结
 jquery中动画机制的设置相对较复杂，要理解动画、动作、动作帧的模型，然后配合队列和异步的概念，实现了动画引擎的设计。
