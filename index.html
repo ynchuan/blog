@@ -37,21 +37,21 @@ title: ynchuan的前端学习记录
 <h4>主页列表</h4>
 <hr>
 <ul class="categories_list">
-	{% for category in site.pages %}
+	{% for post in site.posts %}
 		<li>{{ post.date | date:"%Y-%m-%d"}} 
 			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-			<span class="sp-tag">{{ post.tags }}-{{page.categories}}</span>
-			<span class="sp-tag">{{ page.date | date:"%Y-%m-%d"}}</span>
-			<span class="sp-tag">{{ page.path}}</span>
-			<span class="sp-tag">{{ page.url}}</span>
-			<span class="sp-tag">{{ page.id}}</span>
+			<span class="sp-tag">{{ post.tags }}-{{post.categories}}</span>
+			<span class="sp-tag">{{ post.date | date:"%Y-%m-%d"}}</span>
+			<span class="sp-tag">{{ post.path}}</span>
+			<span class="sp-tag">{{ post.url}}</span>
+			<span class="sp-tag">{{ post.id}}</span>
 			<p class="p">
-				{{page.content}}
+				{{post.content}}
 			</p>
 			<p class="p">
-				{{page.excerpt}}
+				{{post.excerpt}}
 			</p><p class="p">
-				{{page.next}}{{page.previous}}
+				{{post.next}}{{post.previous}}
 			</p>
 		</li>
 	{% endfor %}
