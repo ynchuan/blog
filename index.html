@@ -34,6 +34,29 @@ title: ynchuan的前端学习记录
 	{% endfor %}
 </ul>
 
+<h4>主页列表</h4>
+<hr>
+<ul class="categories_list">
+	{% for category in site.pages %}
+		<li>{{ post.date | date:"%Y-%m-%d"}} 
+			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			<span class="sp-tag">{{ post.tags }}-{{page.categories}}</span>
+			<span class="sp-tag">{{ page.date | date:"%Y-%m-%d"}}</span>
+			<span class="sp-tag">{{ page.path}}</span>
+			<span class="sp-tag">{{ page.url}}</span>
+			<span class="sp-tag">{{ page.id}}</span>
+			<p class="p">
+				{{page.content}}
+			</p>
+			<p class="p">
+				{{page.excerpt}}
+			</p><p class="p">
+				{{page.next}}{{page.previous}}
+			</p>
+		</li>
+	{% endfor %}
+</ul>
+
 
  {% for page in (1..paginator.total_pages) %}  
     {% if page == 1 %}  
