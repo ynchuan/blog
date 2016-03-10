@@ -45,15 +45,24 @@ title: ynchuan的前端学习记录
 			<span class="sp-tag">{{ post.path}}</span>
 			<span class="sp-tag">{{ post.url}}</span>
 			<span class="sp-tag">{{ post.id}}</span>
-			 
+			 <div class="d">
+			 	{{site.pages}}
+			 </div>
 			<p class="p">
 				{{post.excerpt}}
 			</p>
 		</li>
 	{% endfor %}
 </ul>
+<h4>博客列表</h4>
+<ul>
+	{% for post in site.posts %}
+	<li>
+		<a href="{{site.url}}{{post.url}}">{{post.title}}</a>
+		{{ post.excerpt }}
+	</li>
 
-
+</ul>
  {% for page in (1..paginator.total_pages) %}  
     {% if page == 1 %}  
         <a href="./">{{ page }}</a>  
