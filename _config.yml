@@ -1,5 +1,19 @@
+title: YnChuan Blog
+email: wangxunxun3094@qq.com
+description: 
+url: ""
+github_username:  ynchuan
+facebook_username:  axlyody
 baseurl: /blog
 timezone: Asia/Shanghai
-# permalink: /:categories/:year/:month/:title.html
-paginate: 5
-paginate_path: "page:num"
+permalink: /:year/:month/:title.html 
+
+exclude: 
+- darkkimochi
+- assets/images/*.jpg
+- yellowblue
+paginate: 3
+paginate_path: "page/:num"
+gems: 
+- jekyll-archives
+- jekyll-paginate
