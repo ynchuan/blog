@@ -1,35 +1,32 @@
-<div class="large-4 columns">
- <!--  <div class="widgetnya">
-    <h1 class="page-heading">Search</h1>
-    <div class="badanwidget" style="width:0">
-      <input type="text" placeholder="Type here to search..." id="countries"/>
-    </div>
-  </div> -->
-  <div class="widgetnya">
-    <h1 class="page-heading">Tags</h1>
-    <div class="badanwidget">
-      <ul class="tags" style="padding-bottom: 20px;">
-        {% for tag in site.tags %}
-          <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}%">
-            <a id="route" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}">
-              {{ tag | first }}
-              <span>{{ tag | last | size }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+<aside class="aside-tags">
+  <h1 class="page-heading">Tags</h1>
+  <div class="badanwidget">
+    <ul class="tags" style="padding-bottom: 20px;">
+      {% for tag in site.tags %}
+        <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}%">
+          <a id="route" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}">
+            {{ tag | first }}
+            <span>{{ tag | last | size }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
-  <!-- <div class="widgetnya">
-    <h1 class="page-heading">Blogroll</h1>
-    <div class="badanwidget">
-
-    </div>
-  </div> -->
-  <div class="widgetnya">
-    <h1 class="page-heading">Catagories</h1>
-    <div class="badanwidget">
-      {% include aside.html %}
-    </div>
+</aside> 
+<aside class="aside-catogory">
+  <h1 class="page-heading">Catagories</h1>
+  <div class="d-catagory">
+    <ul class="ul-catagoty">
+      {% for cat in site.categories %}
+        {% assign cat_name = cat | first %}
+        {% assign cat_size = cat | last | size %}
+        {% assign cat_slug = cat_name | slugify  %}
+        <li class="li-catagoty">
+          <a class="a-catagory" href="{{"/catagory.html#"|prepend: site.baseurl}}{{cat_slug}}">
+            {{cat_name}} ({{cat_size}})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
-</div>
+</aside>

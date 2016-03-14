@@ -2,62 +2,31 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: 56px; 
-  position: relative;
+  line-height: 56px; 
+  background-color: #375A7F;
+  color:#fff;
 }
 .site-title {
   font-size: 26px;
   font-weight: 300;
-  line-height: 56px;
   letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-
-  &, &:visited {
-    color: $grey-color-dark;
-  }
+  float: left; 
 }
 .site-nav {
-  float: right;
-  line-height: 56px;
+  overflow: hidden;
+  text-align: right;
 
-  a.page-link {
-    position: relative;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
+  .page-link {
     transition: all 0.2s;
+    display: inline-block;
   }
-  a.page-link:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0px;
-    width: 100%;
-    top: 36px;
-    border-bottom: 3px solid transparent;
-    transition: 0.5s ease;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-  a.page-link:hover:after {
+  .page-link:hover {
     border-bottom: 2px solid black;
   }
   .menu-icon {
     display: none;
   }
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
- 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
+  
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
