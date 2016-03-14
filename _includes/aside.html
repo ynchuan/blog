@@ -1,0 +1,18 @@
+<div class="site-aside">
+	<div class="module"> 
+		<div class="module-body">
+			<ul>
+				{% for cat in site.categories %}
+					{% assign cat_name = cat | first %}
+					{% assign cat_size = cat | last | size %}
+					{% assign cat_slug = cat_name | slugify  %}
+					<li>
+						<a class="bold" href="{{"/category.html#"|prepend: site.baseurl}}{{cat_slug}}">
+							{{cat_name}} ({{cat_size}})
+						</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</div>
+	</div> 
+</div>

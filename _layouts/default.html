@@ -1,12 +1,13 @@
-<!doctype html>
-<html lang="zh-cn">
-	<head>
-		<meta charset="UTF-8">
-		<title>{{ page.title }}</title>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui">
-		<link rel="stylesheet" href="/blog/css/markdownpad-github.css"> 
-	</head>
-	<body>
-		{{ content }}
-	</body>
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <Body>
+    {% include header.html %}
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+  </Body>
 </html>
