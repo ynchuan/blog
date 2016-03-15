@@ -1,27 +1,27 @@
-<aside class="aside-tags">
-  <h1 class="page-heading">Tags</h1>
-  <div class="badanwidget">
-    <ul class="tags" style="padding-bottom: 20px;">
+<aside class="aside-tag">
+  <h1 class="tag-header">Tags</h1>
+  <div class="tag-container">
+    <ul class="tag-ul">
       {% for tag in site.tags %}
-        <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}%">
-          <a id="route" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}">
+        <li class="tag-li">
+          <a class="a-tag" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}">
             {{ tag | first }}
-            <span>{{ tag | last | size }}</span>
+            <span class="s-tag">{{ tag | last | size }}</span>
           </a>
         </li>
       {% endfor %}
     </ul>
   </div>
-</aside> 
+</aside>
 <aside class="aside-catogory">
-  <h1 class="page-heading">Catagories</h1>
-  <div class="d-catagory">
-    <ul class="ul-catagoty">
+  <h1 class="catogory-header">Catagories</h1>
+  <div class="catogory-container">
+    <ul class="catagoty-ul">
       {% for cat in site.categories %}
         {% assign cat_name = cat | first %}
         {% assign cat_size = cat | last | size %}
         {% assign cat_slug = cat_name | slugify  %}
-        <li class="li-catagoty">
+        <li class="catagoty-li">
           <a class="a-catagory" href="{{"/catagory.html#"|prepend: site.baseurl}}{{cat_slug}}">
             {{cat_name}} ({{cat_size}})
           </a>
