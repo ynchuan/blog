@@ -2,56 +2,59 @@
 layout: default
 title: YnChuan Blog
 ---
-{% for post in paginator.posts %}
-    <article class="art-post">
-        <div class="d-art-head">
-            <h2 class="post-title">
-            <a  href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <p class="post-abstract">{{ post.content|strip_html|strip_newlines|truncate: 245}}
-                <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">»</a>
-            </p>
-        </div>
-        <div class="d-art-foot">
-            <span class="post-tags">
-                <i class="typico typcn typcn-tags"></i>
-                {% for tag in post.tags %}
-                    <a  href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}"></a>
-                {% endfor %}
-            </span>
-            <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
-                <i class="typico typcn typcn-calendar-outline"></i> {{ post.date | date: "%b %-d, %Y" }}
-            </time>
-            <span class="post-comment">
-                <i class="typico typcn typcn-messages"></i>
-                <a class="disqus-comment-count"  href="{{ post.url | prepend: site.baseurl }}#disqus_thread" > 0 </a>
-            </span>
-        </div>
-    </article>
-{% endfor %} 
-
-<div class="pagination">
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl  }}" class="previous">
-            <i class="typcn typcn-chevron-left-outline"></i>
-            Previous
-        </a>
-    {% else %}
-        <span class="previous">
-            <i class="typcn typcn-chevron-left-outline"></i>
-            Previous
-        </span>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a  href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="next">
-            Next
-            <i class="typcn typcn-chevron-right-outline"></i>
-        </a>
-    {% else %}
-        <span class="next" align="right">
-            Next
-            <i class="typcn typcn-chevron-right-outline" ></i>
-        </span>
-    {% endif %}
+<div class="index-r">
+    {% include widgets.html %}
 </div>
-{% include widgets.html %}
+<div class="index-l">
+    {% for post in paginator.posts %}
+        <article class="art-post">
+            <div class="d-art-head">
+                <h2 class="post-title">
+                <a class="a-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <p class="post-abstract">{{ post.content|strip_html|strip_newlines|truncate: 155}}
+                    <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">»</a>
+                </p>
+            </div>
+            <div class="d-art-foot">
+                <span class="post-tags">
+                    <i class="typico typcn typcn-tags"></i>
+                    {% for tag in post.tags %}
+                        <a class="a-link" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}"></a>
+                    {% endfor %}
+                </span>
+                <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                <i class="typico typcn typcn-calendar-outline"></i> {{ post.date | date: "%b %-d, %Y" }}
+                </time>
+                <span class="post-comment">
+                    <i class="typico typcn typcn-messages"></i>
+                    <a class="a-link"  href="{{ post.url | prepend: site.baseurl }}#disqus_thread" > 0 </a>
+                </span>
+            </div>
+        </article>
+    {% endfor %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl  }}" class="a-previous">
+                <i class="typcn typcn-chevron-left-outline"></i>
+                Previous
+            </a>
+        {% else %}
+            <span class="s-previous">
+                <i class="typcn typcn-chevron-left-outline"></i>
+                Previous
+            </span>
+        {% endif %}
+        {% if paginator.next_page %}
+            <a  href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="a-next">
+                Next
+                <i class="typcn typcn-chevron-right-outline"></i>
+            </a>
+        {% else %}
+            <span class="a-next">
+                Next
+                <i class="typcn typcn-chevron-right-outline" ></i>
+            </span>
+        {% endif %}
+    </div>
+</div>

@@ -3,19 +3,19 @@ layout: default
 title: Catagory
 permalink: /catagory.html 
 ---
-<div class="d-tags"> 
-  <div class="d-tag-list">
-    {% for tag in site.categories %}
-      <div class="d-tag-group">
-        {% capture tag_name %}{{ tag | first }}{% endcapture %}
-        <h3 id="#{{ tag_name | slugize }}" class="h3-tag-tt">
-        {{ tag_name }}
+<div class="catagory"> 
+  <div class="catagory-list">
+    {% for cat in site.categories %}
+      <div class="d-cat-group">
+        {% capture cat_name %}{{ cat | first }}{% endcapture %}
+        <h3 id="#{{ cat_name | slugize }}" class="h3-cat-tt">
+        {{ cat_name }}
         </h3>
-        {% for post in site.categories[tag_name] %}
-        <div class="d-post-item">
-          <span class="span-post-date">{{ post.date | date:"%b %-d, %Y"}}</span>
-          <h4 class="h4-post-tt">
-          <a href="{{ post.url |prepend:site.baseurl}}">{{post.title}}</a>
+        {% for cat in site.categories[cat_name] %}
+        <div class="d-cat-item">
+          <span class="span-cat-date">{{ cat.date | date:"%b %-d, %Y"}}</span>
+          <h4 class="h4-cat-tt">
+          <a href="{{ cat.url |prepend:site.baseurl}}">{{cat.title}}</a>
           </h4>
         </div>
         {% endfor %}

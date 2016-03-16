@@ -3,12 +3,12 @@ layout: default
 title: Tag
 permalink: /tag.html
 ---
-<div class="d-tags">
-  <div class="d-tag-label">
+<div class="tag">
+  <div class="tag-label">
     <ul class="ul-tag-label">
       {% for tag in site.tags %}
         <li class="li-tag-label">
-          <a href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first }}">
+          <a href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first }}" class="a-link">
             {{ tag | first }}
             <span>{{ tag | last | size }}</span>
           </a>
@@ -16,18 +16,18 @@ permalink: /tag.html
       {% endfor %}
     </ul>
   </div>
-  <div class="d-tag-list">
+  <div class="tag-list">
     {% for tag in site.tags %}
       <div class="d-tag-group">
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
         <h3 id="#{{ tag_name | slugize }}" class="h3-tag-tt">
         {{ tag_name }}
         </h3>
-        {% for post in site.tags[tag_name] %}
-        <div class="d-post-item">
-          <span class="span-post-date">{{ post.date | date:"%b %-d, %Y"}}</span>
-          <h4 class="h4-post-tt">
-          <a href="{{ post.url |prepend:site.baseurl}}">{{post.title}}</a>
+        {% for tag in site.tags[tag_name] %}
+        <div class="d-tag-item">
+          <span class="span-tag-date">{{ tag.date | date:"%b %-d, %Y"}}</span>
+          <h4 class="h4-tag-tt">
+          <a href="{{ tag.url |prepend:site.baseurl}}"  class="a-link">{{tag.title}}</a>
           </h4>
         </div>
         {% endfor %}

@@ -19,12 +19,12 @@ layout: default
         {% endif %}
     </div>
     <p class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="time-pub">
         <i class="typcn typcn-calendar-outline"></i>
         {{ page.date | date: "%b %-d, %Y" }}
         </time>|
         {% for tag in tags %}
-            <a class="a-post-tag" href="{{/tag.html#|prepend:site.baseurl}}{{tag|slugize}}}">
+            <a class="a-link" href="{{/tag.html#|prepend:site.baseurl}}{{tag|slugize}}}">
             <i class="typcn typcn-tags"></i> {{tag}}</a>
         {% endfor %}
     </p>

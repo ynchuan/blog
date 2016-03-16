@@ -1,29 +1,16 @@
 ---
 layout: default
 title: Archive
-permalink: /archive.html 
+permalink: /archive.html
 ---
- 
-
-<div class="archive"> 
-  {% for post in site.posts %} 
-    {% unless post.next %}
-      <h2 class="archive-year">{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-      {% assign post_year = post.date | date: '%Y' %}
-      {% assign next_post_year = post.next.date | date: '%Y' %}
-      {% if post_year != next_post_year %}
-        <hr>
-        <h2 class="archive-year">{{ post.date | date: '%Y' }}</h2>
-      {% endif %}
-    {% endunless %}
-    
+<div class="archive">
+  {% for post in site.posts %}
+    <h2 class="archive-year">{{ post.date | date: '%Y' }}</h2>
     {% assign post_month = post.date | date: '%B' %}
     {% assign post_day = post.date | date: '%d' %}
     <div class="archive-info">
-      <time class="archive-month">{{post_month}} {{post_day}} - </time>
-      <a class="archive-post-title" href="{{ post.url|prepend:site.baseurl }}">{{ post.title }}</a>
-    </div> 
+      <time class="time-month">{{post_month}} {{post_day}} - </time>
+      <a class="a-link" href="{{ post.url|prepend:site.baseurl }}">{{ post.title }}</a>
+    </div>
   {% endfor %}
-</div>  
- 
+</div>

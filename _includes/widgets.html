@@ -5,9 +5,7 @@
       {% for tag in site.tags %}
         <li class="tag-li">
           <a class="a-tag" href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first | slugize }}">
-            {{ tag | first }}
-            <span class="s-tag">{{ tag | last | size }}</span>
-          </a>
+            {{ tag | first }}<span class="s-tag">{{ tag | last | size }}</span></a>
         </li>
       {% endfor %}
     </ul>
