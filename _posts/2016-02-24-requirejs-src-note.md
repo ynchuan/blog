@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: post
 title: requirejs笔记
 category: JS技术
 author: ynchuan
+tags: 
+- js 
+- requirejs
 ---
 ## requirejs笔记
 该文记录requirejs对AMD规范的实现方式，主要涉及加载依赖，模块注入，模块执行的分析，对于路径分析、插件执行、模块命名规范等未做深入理解，以理解require实现思路为目标。

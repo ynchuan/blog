@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 博客笔记
 category: 学习笔记
 author: ynchuan

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 高级程序设计笔记--Event
 category: 学习笔记
 author: ynchuan

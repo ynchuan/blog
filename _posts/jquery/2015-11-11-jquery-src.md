@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: jquery源码学习目录
 category: Jquery开发
 author: ynchuan

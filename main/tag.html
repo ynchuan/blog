@@ -5,13 +5,11 @@ permalink: /tag.html
 ---
 <div class="tag">
   <div class="tag-label">
-    <ul class="ul-tag-label">
+    <ul class="tag-ul">
       {% for tag in site.tags %}
-        <li class="li-tag-label">
-          <a href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first }}" class="a-link">
-            {{ tag | first }}
-            <span>{{ tag | last | size }}</span>
-          </a>
+        <li class="tag-li">
+          <a href="{{"/tag.html#"|prepend: site.baseurl}}{{ tag | first }}" class="a-tag">
+            {{ tag | first }}<span class="s-tag">{{ tag | last | size }}</span></a>
         </li>
       {% endfor %}
     </ul>

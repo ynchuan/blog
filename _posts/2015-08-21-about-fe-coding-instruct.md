@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 前端代码编写的一些习惯
 category: CSS开发
 author: ynchuan

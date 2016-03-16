@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: fastclick执行机制
 category: 移动开发
 author: ynchuan

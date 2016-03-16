@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: ZT:浏览器的渲染机制
 category: 浏览器
 author: ynchuan

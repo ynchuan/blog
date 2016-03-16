@@ -2,20 +2,22 @@
 layout: default
 ---
 <article class="site-post">
-    <h1 class="post-header" itemprop="name headline">
+    <h1 class="post-header">
+    <div class="fr">
+        <i class="typico typcn typcn-messages"></i>
+        <a class="a-comment-count" href="#disqus_thread">0</a>
+    </div>
     {{ page.title }}
-    <i class="typico typcn typcn-messages"></i>
-    <a class="disqus-comment-count" href="#disqus_thread">0</a>
     </h1>
     <div class="post-content" itemprop="articleBody">
         {{ content}}
     </div>
     <div class="post-arrow">
         {% if page.next.url %}
-            <a class="arrow-left typcn typcn-chevron-left" href="{{page.next.url}}"></a>
+            <a class="arrow-left typcn typcn-chevron-left" href="{{page.next.url|prepend:site.baseurl}}"></a>
         {% endif %}
         {% if page.previous.url %}
-            <a class="arrow-right typcn typcn-chevron-left" href="{{page.previous.url}}"></a>
+            <a class="arrow-right typcn typcn-chevron-right" href="{{page.previous.url|prepend:site.baseurl}}"></a>
         {% endif %}
     </div>
     <p class="post-meta">
@@ -29,7 +31,7 @@ layout: default
         {% endfor %}
     </p>
 </article>
- 
+
 <!-- <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
@@ -44,5 +46,4 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
 </div> -->

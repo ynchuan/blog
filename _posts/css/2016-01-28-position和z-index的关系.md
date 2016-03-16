@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: position与z-index关系小记
 category: CSS开发
 author: ynchuan

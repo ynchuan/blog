@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: display与line-height+vertical-align+text-align的关系
 category: CSS开发
 author: ynchuan

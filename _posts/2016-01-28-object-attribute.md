@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Object的属性
 category: JS技术
 author: ynchuan

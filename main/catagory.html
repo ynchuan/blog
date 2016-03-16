@@ -8,14 +8,14 @@ permalink: /catagory.html
     {% for cat in site.categories %}
       <div class="d-cat-group">
         {% capture cat_name %}{{ cat | first }}{% endcapture %}
-        <h3 id="#{{ cat_name | slugize }}" class="h3-cat-tt">
+        <h3 id="{{ cat_name | slugize }}" class="h3-cat-tt">
         {{ cat_name }}
         </h3>
         {% for cat in site.categories[cat_name] %}
         <div class="d-cat-item">
           <span class="span-cat-date">{{ cat.date | date:"%b %-d, %Y"}}</span>
           <h4 class="h4-cat-tt">
-          <a href="{{ cat.url |prepend:site.baseurl}}">{{cat.title}}</a>
+          <a class="a-link" href="{{ cat.url |prepend:site.baseurl}}">{{cat.title}}</a>
           </h4>
         </div>
         {% endfor %}

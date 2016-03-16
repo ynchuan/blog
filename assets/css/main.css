@@ -458,13 +458,14 @@ body {
 }
 .nav-trigger {
   text-align: right;
+  font-size: 16px;
 }
 .nav-trigger .a-link {
   line-height: 30px;
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .nav-trigger .a-link:hover {
   background-color: #2e4967;
@@ -499,7 +500,8 @@ body {
   padding-right: 20px;
   margin-bottom: 50px;
 }
-.d-art-foot {
+.d-art-foot,
+.post-meta {
   background-color: #00bc8c;
   line-height: 50px;
   font-size: 13px;
@@ -507,7 +509,8 @@ body {
   padding-right: 20px;
   position: relative;
 }
-.d-art-foot:after {
+.d-art-foot:after,
+.post-meta:after {
   content: "";
   display: block;
   position: absolute;
@@ -600,28 +603,28 @@ body {
 .catogory-container {
   background-color: #3e3e3e;
 }
-.aside-tag .tag-ul {
+.tag-ul {
   padding: 15px;
   color: #ffffff;
   line-height: 25px;
   overflow: hidden;
   *zoom: 1;
 }
-.aside-tag .tag-li {
+.tag-li {
   float: left;
   margin-right: 15px;
   background-color: #e74c3c;
 }
-.aside-tag .a-tag {
+.a-tag {
   color: #ffffff;
   display: block;
   padding-left: 10px;
   font-size: 13px;
 }
-.aside-tag .a-tag:hover {
+.a-tag:hover {
   color: #b7b3bf;
 }
-.aside-tag .s-tag {
+.s-tag {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -640,4 +643,335 @@ body {
 }
 .a-catagory:hover {
   color: #b7b3bf;
+}
+/**
+ * catagory.html
+ */
+.h3-cat-tt,
+.h3-tag-tt {
+  margin: 0;
+  line-height: 45px;
+  color: #00bc8c;
+  padding: 0 20px;
+  border-bottom: 1px solid #00bc8c;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.d-cat-item,
+.d-tag-item {
+  padding: 0 20px;
+}
+.h4-cat-tt,
+.h4-tag-tt {
+  margin: 0;
+  font-weight: lighter;
+}
+.h4-cat-tt .a-link:hover,
+.h4-tag-tt .a-link:hover {
+  color: #68e7c3;
+}
+.d-cat-group,
+.d-tag-group {
+  line-height: 35px;
+  background-color: #3e3e3e;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+.span-cat-date,
+.span-tag-date {
+  float: left;
+  width: 120px;
+}
+/**
+ * archive.html
+ */
+.archive {
+  margin-bottom: 30px;
+}
+.archive-year {
+  margin: 0;
+  margin-top: 30px;
+  line-height: 45px;
+  color: #00bc8c;
+  padding: 0 20px;
+  border-bottom: 1px solid #00bc8c;
+  font-size: 20px;
+  background-color: #3e3e3e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.time-month {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100px;
+}
+.archive-info {
+  line-height: 35px;
+  background-color: #3e3e3e;
+  padding: 0 20px;
+}
+.archive-info .a-link:hover {
+  color: #68e7c3;
+}
+/**
+ * tag.html
+ */
+.tag-label {
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.tag-label .tag-ul {
+  padding-left: 2px;
+}
+/**
+ * post.html
+ */
+.site-post {
+  margin: 30px 0;
+  position: relative;
+}
+.post-header {
+  line-height: 65px;
+  font-size: 25px;
+  font-weight: lighter;
+  background-color: #00bc8c;
+  padding: 0 30px;
+  margin: 0;
+}
+.post-header .a-comment-count {
+  color: #ffffff;
+  margin: 0 10px;
+}
+.post-content {
+  background-color: #3e3e3e;
+  padding: 0 30px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.post-arrow {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  line-height: 30px;
+  text-align: right;
+  font-size: 30px;
+}
+.post-arrow .arrow-left {
+  float: left;
+  margin-left: -40px;
+}
+.post-arrow .arrow-right {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: -40px;
+}
+.post-arrow .arrow-left,
+.post-arrow .arrow-right {
+  color: #ffffff;
+}
+.post-arrow .arrow-left:hover,
+.post-arrow .arrow-right:hover {
+  color: #cac6c6;
+}
+.highlight {
+  background: #fff;
+}
+.highlighter-rouge .highlight {
+  background: #eef;
+}
+.highlight .c {
+  color: #998;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .k {
+  font-weight: bold;
+}
+.highlight .o {
+  font-weight: bold;
+}
+.highlight .cm {
+  color: #998;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .gd {
+  color: #000;
+  background-color: #ffdddd;
+}
+.highlight .gd .x {
+  color: #000;
+  background-color: #ffaaaa;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000;
+  background-color: #ddffdd;
+}
+.highlight .gi .x {
+  color: #000;
+  background-color: #aaffaa;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  font-weight: bold;
+}
+.highlight .kd {
+  font-weight: bold;
+}
+.highlight .kp {
+  font-weight: bold;
+}
+.highlight .kr {
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #458;
+  font-weight: bold;
+}
+.highlight .m {
+  color: #009999;
+}
+.highlight .s {
+  color: #dd1144;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .nb {
+  color: #0086b3;
+}
+.highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #900;
+  font-weight: bold;
+}
+.highlight .nf {
+  color: #900;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .nv {
+  color: #008080;
+}
+.highlight .ow {
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .sb {
+  color: #dd1144;
+}
+.highlight .sc {
+  color: #dd1144;
+}
+.highlight .sd {
+  color: #dd1144;
+}
+.highlight .s2 {
+  color: #dd1144;
+}
+.highlight .se {
+  color: #dd1144;
+}
+.highlight .sh {
+  color: #dd1144;
+}
+.highlight .si {
+  color: #dd1144;
+}
+.highlight .sx {
+  color: #dd1144;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #dd1144;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .il {
+  color: #009999;
 }

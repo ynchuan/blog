@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: css学习资料
 category: CSS开发
 author: ynchuan
