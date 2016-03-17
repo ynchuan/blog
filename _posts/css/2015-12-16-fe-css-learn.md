@@ -16,17 +16,17 @@ css是浏览器的排版标记，浏览器跟office word软件功能相同，都
 
 >布局中涉及到css属性常用的有：
 >
->dispalay：inline|block|inline-block（常用）[html元素按照display属性的分类](http://10.110.1.135:8888/?p=95)*（公司内网环境）*
+>dispalay：inline/block/inline-block（常用）[html元素按照display属性的分类](http://10.110.1.135:8888/?p=95)*（公司内网环境）*
 >
->float:left|right
+>float:left/right
 >
->position:absolute|fixed|relative
+>position:absolute/fixed/relative
 >
 >理解好以上单个属性的含义以及属性之间组合的使用就可以解决页面布局排版常出现的问题
 
 ### 页面文档流
 
-布局文档流主要分为3类，有正常流布局、浮动布局（float:left|right）、绝对布局（position:absolute|fixed|relative）。
+布局文档流主要分为3类，有正常流布局、浮动布局（float:left/right）、绝对布局（position:absolute/fixed/relative）。
 理解该三类布局即可解决日常的开发问题。
 
 - 正常流布局：正常流布局的position的值为static，也是position的第四个属性值，页面按照流式布局。流式布局，即从上向下、从左向右的顺序进行流式的排版。流式的换行和左右布局，涉及到的是css中的行级元素和块级元素两类元素，该两类又基本涉及两类盒子模型，它们之间的区别之一就是盒子彼此之间是否会换行显示，其他的区别，随着学习的深入会有深入的理解。

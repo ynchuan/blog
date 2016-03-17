@@ -9,13 +9,14 @@ tags:
 ---
 ## requirejs笔记
 该文记录requirejs对AMD规范的实现方式，主要涉及加载依赖，模块注入，模块执行的分析，对于路径分析、插件执行、模块命名规范等未做深入理解，以理解require实现思路为目标。
+
 ### [AMD规范](https://github.com/amdjs/amdjs-api/blob/master/require.md)
 AMD是对于js模块化编程的一种规范，即向外暴漏两个函数define和require，分别实现定义模块和使用模块，实现模块化js编码，API如下：
 
      定义模块：define(id?, dependencies?, factory);
 	 使用模块：require(String)|require(Array, Function)
 
-### DEMO
+### DEMO 
 	模块定义：
 	//1.js
 	define(function() {
@@ -64,8 +65,7 @@ AMD是对于js模块化编程的一种规范，即向外暴漏两个函数define
 		// a.setWord("set a from main");
 		// a.say();
 		a.sayhi();
-	});
-	
+	}); 
 	html:
 	<script type="text/javascript" src="require.js" data-main="js/main"></script> 
 
@@ -112,6 +112,7 @@ requirejs中所有的require调用都会生成一个**根模块**，其依赖可
 10. ps:如果2先于1加载完成，因为2依赖1，所以不会再创建1，因为1已经创建完成，只是2会添加对1加载完成的监听，当1完成，不管先响应2还是3,2在完成的时候也会响应一下3，都可以实现该依赖逻辑的正常执行，达到最后目的
 
 以上为demo案例中的逻辑分析，具体可见源代码。其中理解管家的函数为onScriptLoaded和on方法，一个加载，一个上溯回调；通过在module中添加一些状态标记来进行功能逻辑控制，状态依次为：init-enabled-enabling-defining-defined
+
 ### 后续学习 
 
 进行循环依赖的分析以及路径、命名规范分析的实验
@@ -125,6 +126,7 @@ http://efe.baidu.com/blog/dissecting-amd-what/
 
 ### 总结
 requirejs中通过创建根模块实现模块加载的启动，在根模块中通过链表管理子模块，通过依赖计数和闭包实现子模块加载完成上溯回调。
+
 ### 备注: 
 newContext创建内部对象context,作为执行上下文，该方法只执行一次，context对象属性：
 

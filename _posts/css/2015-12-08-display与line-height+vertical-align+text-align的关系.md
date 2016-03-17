@@ -14,10 +14,10 @@ display属性为dom对象的布局属性，一般常用的包括inline（表示�
 inline-heihgt表示行高，该属性表示office word中的行间距，即一行文字的高度,可以作用在行级和块级元素上。属性值为数字+单位。常见应用：一般而言对于block级元素，设置行高就是设置了高度，所以不用再次设置高度了，同时通过行高设置高度，还可以使得文字或者行级元素居中。
 ##vertical-align
 vertial-align表示文字（display：inline）或者文本块（display:inline-block）在行间的**垂直方向**上的对齐方式,样式属性作用对象为行级或者行块级元素；属性作用在block级别的元素上没有效果。
-其属性值常用的有top|middle|baseline|bottom|数字+单位
+其属性值常用的有top/middle/baseline/bottom/数字+单位
 
 ## text-align
-表示文本**水平方向**上的对齐方式，作用在block级别的dom上，属性值有left|right|center
+表示文本**水平方向**上的对齐方式，作用在block级别的dom上，属性值有left/right/center
 
 
 ### 下面我们进行以上属性组合使用的一些讨论：
@@ -55,7 +55,7 @@ vertial-align表示文字（display：inline）或者文本块（display:inline-
 
 已知以上条件，chrome环境下，问题的答案是多少？又有哪些因素来决定？
 
-3、试着分别调整class=inline和inline1的盒子的vertical-align属性为middle|top，一次调整一个，观察变化。
+3、试着分别调整class=inline和inline1的盒子的vertical-align属性为middle/top，一次调整一个，观察变化。
 
 4、调整class=inline的盒子的display属性为inline-block,观察绿色边框的变化。
 
@@ -70,7 +70,7 @@ ps：结果的验证请使用屏幕标尺进行验证，该处主要涉及css中
 
 3、首先当一行中的行级盒子lineHeight不相等的时候，该行采用lineHeight最大的行级盒子的line-height作为该行高度。另，当font-size大于了line-height的时候，此时line-height属性就会失效，至于该处的实际的高度的计算就稍微复杂，**待议**。
 
-行级盒子的模型可以理解为由汉语拼音练习册中的四线（分别为top|middle|baseline|bottom四线）加上下半间距构成，其中以英文字母X进行参考。
+行级盒子的模型可以理解为由汉语拼音练习册中的四线（分别为top/middle/baseline/bottom四线）加上下半间距构成，其中以英文字母X进行参考。
 inline box 模型参考:
 
 ![](/blog/images/line-box.png)
