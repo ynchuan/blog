@@ -14,60 +14,60 @@ tags:
 AMD是对于js模块化编程的一种规范，即向外暴漏两个函数define和require，分别实现定义模块和使用模块，实现模块化js编码，API如下：
 
      定义模块：define(id?, dependencies?, factory);
-	 使用模块：require(String)|require(Array, Function)
+     使用模块：require(String)|require(Array, Function)
 
 ### DEMO 
-	模块定义：
-	//1.js
-	define(function() {
-		var word;
-		var setWord = function(w) {
-			word = w;
-		}
-		var getWord = function() {
-			return word;
-		}
-		var say = function() {
-			console.log("in 1.js ,i am  say:" + word);
-		}
-		 
-		return {
-			setWord: setWord,
-			say: say,
-			getWord: getWord
-		}
-	});
+    模块定义：
+    //1.js
+    define(function() {
+        var word;
+        var setWord = function(w) {
+            word = w;
+        }
+        var getWord = function() {
+            return word;
+        }
+        var say = function() {
+            console.log("in 1.js ,i am  say:" + word);
+        }
+         
+        return {
+            setWord: setWord,
+            say: say,
+            getWord: getWord
+        }
+    });
 
-	//2.js 
-	define(["1"], function(a) {
-		a.plugin = function() {
-			console.log("this is add plugin in 2.js");
-		}
-		return a;
-	});
+    //2.js 
+    define(["1"], function(a) {
+        a.plugin = function() {
+            console.log("this is add plugin in 2.js");
+        }
+        return a;
+    });
 
-	//3.js
-	define(["2", "1"], function(b) {
-		var sayhi = function() {
-			b.setWord("in 3.js,3 base 2");
-			b.say();
-			b.plugin();
-			var a=require("1");
-			a.say();
-		}
-		return {
-			sayhi: sayhi
-		}
-	});
-	模块调用：
-	//main.js 
-	require(['3'], function(a,c) { 
-		// a.setWord("set a from main");
-		// a.say();
-		a.sayhi();
-	}); 
-	html:
-	<script type="text/javascript" src="require.js" data-main="js/main"></script> 
+    //3.js
+    define(["2", "1"], function(b) {
+        var sayhi = function() {
+            b.setWord("in 3.js,3 base 2");
+            b.say();
+            b.plugin();
+            var a=require("1");
+            a.say();
+        }
+        return {
+            sayhi: sayhi
+        }
+    });
+    模块调用：
+    //main.js 
+    require(['3'], function(a,c) { 
+        // a.setWord("set a from main");
+        // a.say();
+        a.sayhi();
+    }); 
+    html:
+    <script type="text/javascript" src="require.js" data-main="js/main"></script> 
 
 ### 代码结构
 代码通过全局变量向外暴漏require和define两个对象（即函数），变量的实现部分在自执行函数中防止变量污染，内部的对象关系如下：

@@ -25,29 +25,29 @@ vertial-align表示文字（display：inline）或者文本块（display:inline-
 
 2、给定以下条件：
 
-	<div class="b">
-		<span class="inline">x</span>
-		<div class="inline1">x inline</div>
-		x
-	</div>
+    <div class="b">
+        <span class="inline">x</span>
+        <div class="inline1">x inline</div>
+        x
+    </div>
 
-	.inline{
-		width:100px;
-		line-height:40px;
-		border:1px solid red; 
-		display: inline; 
-		font-size:16px;
-	}
-	.inline1{
-		width:100px;
-		line-height:30px;
-		border:1px solid red; 
-		display: inline; 
-		font-size:16px;
-	}
-	.b{
-		border:1px solid green;
-	  }
+    .inline{
+        width:100px;
+        line-height:40px;
+        border:1px solid red; 
+        display: inline; 
+        font-size:16px;
+    }
+    .inline1{
+        width:100px;
+        line-height:30px;
+        border:1px solid red; 
+        display: inline; 
+        font-size:16px;
+    }
+    .b{
+        border:1px solid green;
+      }
 
 
 [参见demo](http://codepen.io/ynchuan/pen/zveMNO)

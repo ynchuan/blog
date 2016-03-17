@@ -15,6 +15,3 @@ exclude:
 gems: 
 - jekyll-archives
 - jekyll-paginate 
-
-markdown: kramdown
-highlighter: rouge

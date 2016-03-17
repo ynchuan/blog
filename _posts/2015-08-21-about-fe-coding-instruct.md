@@ -58,15 +58,15 @@ css在添加样式的过程中，除了采用外链样式文件以外，在dom�
 命名空间：通过在上层添加标识，在底层定义的时候添加标识限制，例如下例中的`.wf`：
 
     <header class="wf">
-		<div class="wrap">
-			<div class="wfh">
-				您好，
-				<a class="wfh_usr">SUPERADMIN</a>
-				|
-				<a class="wfh_logout">退出</a>
-			</div>
-		</div>
-	</header>
+        <div class="wrap">
+            <div class="wfh">
+                您好，
+                <a class="wfh_usr">SUPERADMIN</a>
+                |
+                <a class="wfh_logout">退出</a>
+            </div>
+        </div>
+    </header>
 
     css部分:
     .wf .wrap{}
@@ -92,8 +92,8 @@ css在添加样式的过程中，除了采用外链样式文件以外，在dom�
 代码结论：我们定义的arg变量是定义在window环境中的，如果大家都将变量定义在window中，导致window环境中变量重名的可能性很大，所以我们不建议这样写。（ps:this=window,此处涉及js的面向对象，属于进阶部分，请有兴趣的可以研究一下。）我们建议将该变量定义在window的局部环境中，其中涉及匿名自执行函数。
     
     (function() {
-    	var arg = "children scope";
-    	console.log("child arg=" + arg);
+        var arg = "children scope";
+        console.log("child arg=" + arg);
     })();
     console.log("  arg=" + arg); 
     console.log("this  arg=" + this.arg);
@@ -111,8 +111,8 @@ css在添加样式的过程中，除了采用外链样式文件以外，在dom�
 
     去掉console.log("  arg=" + arg):
     (function() {
-    	var arg = "children scope";
-    	console.log("child arg=" + arg);
+        var arg = "children scope";
+        console.log("child arg=" + arg);
     })();
     console.log("this  arg=" + this.arg);
     console.log("window arg=" + window.arg);
