@@ -28,7 +28,7 @@ title: YnChuan Blog
                 </time>
                 <span class="post-comment">
                     <i class="typico typcn typcn-messages"></i>
-                    <a class="a-link"  href="{{ post.url | prepend: site.baseurl }}#disqus_thread" > 0 </a>
+                    <a class="a-link"  href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.id}}" > 0 </a>
                 </span>
             </div>
         </article>
