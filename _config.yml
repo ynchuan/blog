@@ -4,6 +4,7 @@ description:
 url: ""
 github_username:  ynchuan 
 baseurl: /blog
+hoster: http://ynchuan.github.io/blog/
 timezone: Asia/Shanghai 
 paginate: 5
 paginate_path: "page:num" 
