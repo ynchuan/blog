@@ -24,7 +24,7 @@ tags:
 
 该常用样式库为项目中常用样式表的总结，未来会根据需求进行修改补充和完善。
 
-##使用举例说明：
+## 使用举例说明：
 1. 创建切图页面，例如test.html，并创建对应的test.less文件
 2. test.less中引入base.less文件，并将test.less编译成test.css
 3. 开始定制页面样式：
@@ -61,7 +61,7 @@ tags:
 
 以上实现了快速定义样式表，减少代码的敲入量以及单词书写失误。[查看demo](https://github.com/ynchuan/base-less-atom/tree/master/test/less/test.less)
 
-##less库说明
+## less库说明
 
 ####基础less样式表
 基础样式的简写命名一般是**属性名的第一个字母**加上**属性值的第一个字母**，个别重复的地方切换其他相关字母，或者是**属性名的第一个单词的第一个字母**加上**属性名第二个单词的第一个字母**，具体根据实际情况而定，实现简写。
@@ -81,7 +81,7 @@ tags:
 - 清理浮动（clear）:.cl-(left),.cr-(right),.cb-(both)
 - 背景色(background-color)： .bgcolor(#***)
 - 动画多度(transition)：.trans
-####组合less样式表
+#### 组合less样式表
 该部分命名偏功能语义化
 
 - 块级格式化上下文：.bfc
@@ -96,17 +96,17 @@ tags:
 - 三角形：.triangle-down-(下三角)，.triangle-up-(上三角)，.triangle-left-(左三角)，.triangle-right-(右三角),可以传入颜色值，默认三角宽度为5px，例如灰色向下三角：.triangle-down(#ccc)
 - 绝对定位隐藏：.abs-out,.abs-clip
 - 按钮禁用：.disabled
-####页面基础布局less样式表
+#### 页面基础布局less样式表
 该部分为页面整体定义一些基本的样式，添加在body的子盒子中
 
 - 流体页面：.main-flow
 - 满屏页面：.main-full
 - 中心包裹：.wrap
 
-##写在最后
+## 写在最后
 本less简写经过实践可以提高编写样式表的效率，但是前提要熟练记忆，至少记忆一些常用的。也可以按照个人习惯修改其中的常用的样式的简写，工具而已，只要能够正常使用即可。less编译工具可以使用koala
 
-###License
+### License
 BSD
 
 
