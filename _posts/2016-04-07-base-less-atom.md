@@ -18,7 +18,7 @@ tags:
 
 - 页面样式表封装：例如.wrap,.main-flow,.main-full为页面整体布局样式
 
-- 其中包含了一些兼容ie6|7的hack（很**,因为我们有些项目要兼容ie6、7）
+- 其中包含了一些兼容ie6/7的hack（很**,因为我们有些项目要兼容ie6、7）
 
 以上的使用在工作中可以快速编写样式表，提高编写速度和工作效率。 
 
@@ -28,36 +28,36 @@ tags:
 1. 创建切图页面，例如test.html，并创建对应的test.less文件
 2. test.less中引入base.less文件，并将test.less编译成test.css
 3. 开始定制页面样式：
-		
-		//test.html
-		<!DOCTYPE html>
-		<html>
-			<head>
-				<title>base less atom</title>
-				<link rel="stylesheet" href="css/test.css">
-			</head>
-			<body>
-				<h1 class="h1-tt">base less atom 使用说明</h1>
-				<p class="p-c"></p> 
-			</body>
-		</html>
+        
+        //test.html
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>base less atom</title>
+                <link rel="stylesheet" href="css/test.css">
+            </head>
+            <body>
+                <h1 class="h1-tt">base less atom 使用说明</h1>
+                <p class="p-c"></p> 
+            </body>
+        </html>
 
-		//test.less
-		@import (reference) "../../src/base.less";
-		//通过reference会导致生成的test.css中不包含base.less中定义的样式，只满足引用
-		.h1-tt{
-			.line-height(30px);
-			.fs(16px);
-			.ff;
-			.color(#ccc);
-			.bb(#eee);
-			.fw(lighter);
-		}
-		.p-c{
-			.m(0);
-			.line-height(25px);
-			.fs(14px);
-		} 
+        //test.less
+        @import (reference) "../../src/base.less";
+        //通过reference会导致生成的test.css中不包含base.less中定义的样式，只满足引用
+        .h1-tt{
+            .line-height(30px);
+            .fs(16px);
+            .ff;
+            .color(#ccc);
+            .bb(#eee);
+            .fw(lighter);
+        }
+        .p-c{
+            .m(0);
+            .line-height(25px);
+            .fs(14px);
+        } 
 
 以上实现了快速定义样式表，减少代码的敲入量以及单词书写失误。[查看demo](https://github.com/ynchuan/base-less-atom/tree/master/test/less/test.less)
 
