@@ -898,6 +898,9 @@ body {
   line-height: 24px;
   font-size: 15px;
 }
+.post-content li {
+  padding-bottom: 8px;
+}
 .post-content ul li > :first-child,
 .post-content ol li > :first-child,
 .post-content ul li ul:first-of-type,
