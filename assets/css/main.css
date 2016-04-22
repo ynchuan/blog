@@ -899,7 +899,8 @@ body {
   font-size: 15px;
 }
 .post-content li {
-  padding-bottom: 8px;
+  padding-bottom: 5px;
+  list-style-type: square;
 }
 .post-content ul li > :first-child,
 .post-content ol li > :first-child,
