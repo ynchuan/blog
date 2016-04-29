@@ -18,7 +18,7 @@ permalink: /tag.html
     {% for tag in site.tags %}
       <div class="d-tag-group">
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
-        <h3 id="#{{ tag_name | slugize }}" class="h3-tag-tt">
+        <h3 id="{{ tag_name | slugize }}" class="h3-tag-tt">
         {{ tag_name }}
         </h3>
         {% for tag in site.tags[tag_name] %}
