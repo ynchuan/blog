@@ -3,7 +3,7 @@ email: wangxunxun3094@qq.com
 description: 
 url: ""
 github_username:  ynchuan 
-baseurl: /blog
+baseurl: 
 hoster: https://ynchuan.github.io
 timezone: Asia/Shanghai 
 paginate: 5
